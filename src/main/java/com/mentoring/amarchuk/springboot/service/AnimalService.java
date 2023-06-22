@@ -22,4 +22,6 @@ public interface AnimalService {
     Animal updateAnimal(String name, String color, long id);
 
     void deleteAnimal(long id);
+
+    Animal findById(long id);
 }

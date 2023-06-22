@@ -16,18 +16,6 @@ import org.springframework.core.env.Environment;
 public class Application {
 	Logger log = LoggerFactory.getLogger(Application.class);
 
-//		public static void main(String[] args) {
-//		SpringApplication.run(Application.class, args);
-//
-//	}
-//	@Bean
-//	ApplicationRunner applicationRunner(Environment environment) {
-//		return args -> {
-//			log.info("message from application.properties " + environment.getProperty("message-from-application-properties"));
-//		};
-//	}
-
-
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication
 				.run(Application.class, args);
@@ -35,31 +23,8 @@ public class Application {
 		for (String name : applicationContext.getBeanDefinitionNames()) {
 			System.out.println(name);
 		}
-	}
 
-	@Profile("dev")
-	@Bean
-	public String devBean() {
-		return "dev";
-	}
 
-	@Profile("local")
-	@Bean
-	public String localBean() {
-		return "local";
 	}
-
-	@Profile("stg")
-	@Bean
-	public String stgBean() {
-		return "stg";
-	}
-
-	@Profile("prod")
-	@Bean
-	public String prodBean() {
-		return "prod";
-	}
-
 
 }

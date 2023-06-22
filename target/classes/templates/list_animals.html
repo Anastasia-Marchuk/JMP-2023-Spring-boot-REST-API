@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta content="text/html" charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>User</title>
+
+    <style>
+        /* внешние границы таблицы серого цвета толщиной 1px */
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            font-size: 13px;
+            font-weight: normal;
+            background: #b9c9fe;
+            color: #039;
+            padding: 8px;
+            border: 1px solid grey;
+        }
+        td {
+            background: #e8edff;
+            color: #669;
+            padding: 8px;
+            border: 1px solid grey;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<header>
+
+
+    <p></p>
+    <div>
+        <button><a class="buttonAdd" href="/new">Add animal</a></button>
+    </div>
+    <p></p>
+
+</header>
+
+<section>
+    <div>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Color</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="animal : ${animals}" >
+                <td th:text="${animal.getId()}"></td>
+                <td th:text="${animal.getName()}"></td>
+                <td th:text="${animal.getColor()}"></td>
+
+
+                <td>
+                    <a class="aEdit" th:href="@{/update/{id}(id=${animal.getId})}">Update</a>
+                    <a class="aDelete" th:href="@{/delete/{id}(id=${animal.getId})}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</section>
+
+
+</body>
+</html>

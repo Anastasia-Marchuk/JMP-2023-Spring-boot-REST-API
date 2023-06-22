@@ -1,6 +1,5 @@
 package com.mentoring.amarchuk.springboot.model;
 
-import org.hibernate.annotations.Table;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-//@Table(appliesTo = "animal")
 public class Animal {
 
     @Id

@@ -52,4 +52,9 @@ public class AnimalServiceImpl implements AnimalService {
         repository.deleteById(id);
 
     }
+
+    @Override
+    public Animal findById(long id) {
+        return repository.findById(id);
+    }
 }
