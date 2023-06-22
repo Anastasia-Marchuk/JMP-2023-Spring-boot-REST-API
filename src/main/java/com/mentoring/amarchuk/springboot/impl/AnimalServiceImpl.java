@@ -1,7 +1,8 @@
-package com.mentoring.amarchuk.springboot.service;
+package com.mentoring.amarchuk.springboot.impl;
 
+import com.mentoring.amarchuk.springboot.api.AnimalService;
 import com.mentoring.amarchuk.springboot.dao.AnimalRepository;
-import com.mentoring.amarchuk.springboot.model.Animal;
+import com.mentoring.amarchuk.springboot.dto.Animal;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

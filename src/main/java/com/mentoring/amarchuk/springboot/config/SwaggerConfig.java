@@ -14,7 +14,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.mentoring.amarchuk.springboot.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.mentoring.amarchuk.springboot.REST"))
                 .paths(PathSelectors.any())
                 .build();
     }

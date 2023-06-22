@@ -1,6 +1,6 @@
 package com.mentoring.amarchuk.springboot.dao;
 
-import com.mentoring.amarchuk.springboot.model.Animal;
+import com.mentoring.amarchuk.springboot.dto.Animal;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

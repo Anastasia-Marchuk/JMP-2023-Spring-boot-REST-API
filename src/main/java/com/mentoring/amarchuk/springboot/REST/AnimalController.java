@@ -1,15 +1,10 @@
-package com.mentoring.amarchuk.springboot.controller;
+package com.mentoring.amarchuk.springboot.REST;
 
-import com.mentoring.amarchuk.springboot.model.Animal;
-import com.mentoring.amarchuk.springboot.service.AnimalService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+import com.mentoring.amarchuk.springboot.dto.Animal;
+import com.mentoring.amarchuk.springboot.api.AnimalService;
+import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,7 +23,7 @@ public class AnimalController {
         this.animalService = animalService;
     }
 
-        @ApiOperation(value = "Get a all animals", notes = "Returns a list of animals")
+    @ApiOperation(value = "Get a all animals", notes = "Returns a list of animals")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved"),
             @ApiResponse(code = 404, message = "Not found - Something went wrong")
@@ -41,10 +36,10 @@ public class AnimalController {
         return animals;
     }
 
-    //    @ApiOperation(value = "Get animal by name", nickname = "Get animal by name")
-//    @ApiImplicitParams({
-//            @ApiImplicitParam(name = "name", value = "Animal's name", required = true, dataType = "String", paramType = "path", defaultValue="1")
-//    })
+        @ApiOperation(value = "Get animal by name", nickname = "Get animal by name")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "name", value = "Animal's name", required = true, dataType = "String", paramType = "path", defaultValue="1")
+    })
     @GetMapping("/{name}")
     public List <Animal> getAnimalByName(@PathVariable("name") String name) {
         List<Animal> animals = animalService.findByName(name);

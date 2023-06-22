@@ -1,6 +1,6 @@
-package com.mentoring.amarchuk.springboot.service;
+package com.mentoring.amarchuk.springboot.api;
 
-import com.mentoring.amarchuk.springboot.model.Animal;
+import com.mentoring.amarchuk.springboot.dto.Animal;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 

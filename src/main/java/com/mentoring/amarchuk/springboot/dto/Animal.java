@@ -1,4 +1,4 @@
-package com.mentoring.amarchuk.springboot.model;
+package com.mentoring.amarchuk.springboot.dto;
 
 
 import javax.persistence.Entity;
