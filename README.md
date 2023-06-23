@@ -17,6 +17,10 @@
 ## URL for Swagger API Docs Json
 1. http://localhost:8097/v2/api-docs
 
+## Swagger UI URL
+1. http://localhost:8097/marchukSwaggerUrl
+Ddefault URL was chancged from http://localhost:8097/swagger-ui.html to http://localhost:8097/marchukSwaggerUrl in application.properties
+
  
  
 
