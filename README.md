@@ -19,7 +19,8 @@
 
 ## Swagger UI URL
 1. http://localhost:8097/marchukSwaggerUrl
-Ddefault URL was chancged from http://localhost:8097/swagger-ui.html to http://localhost:8097/marchukSwaggerUrl in application.properties
+   
+Default URL was chancged from localhost:8097/swagger-ui.html to localhost:8097/marchukSwaggerUrl in application.properties
 
  
  
