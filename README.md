@@ -13,6 +13,10 @@
     "color": "WHITE"
 }
 
+
+## URL for Swagger API Docs Json
+1. http://localhost:8080/v2/api-docs
+
  
  
 
